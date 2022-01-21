@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+:root{
+	---blue: hsl(223, 87%, 63%);
+	---pale-blue: hsl(223, 100%, 88%);
+	---light-red: hsl(354, 100%, 66%);
+	---gray: hsl(0, 0%, 59%);
+	---very-dark-blue: hsl(209, 33%, 12%);
+}
+*{
+	margin: 0 0;
+	padding: 0 0;
+	font-size: 20px;
+	font-family: 'Libre Franklin', sans-serif;
+}
+html{
+	}
+body{
+}
+main{
+	display: flex;
+	flex-flow: column;
+	flex-wrap: wrap;
+	padding: 70px 20px 10px 20px;
+	text-align: center;
+	align-items: center;
+	gap: 10px;
+}
+#logo{
+	max-width: 60px;
+	margin-bottom: 20px;
+}
+h1{
+	font-size: 24px;
+	font-weight: 300;
+	color: var(---gray);
+}
+h1 strong{
+	font-size: 24px;
+	color: black;
+}
+h2{
+	font-size: 12px;
+	font-weight: 600;
+	color: var(---gray);
+	margin-bottom: 10px;
+}
+
+.input-container{
+	max-width: 300px;
+	display: flex;
+	flex-flow: column;
+	gap: 5px;
+	margin-bottom: 30px;
+}
+::placeholder {
+  color: var(---pale-blue);
+  opacity: 1;
+}
+.input-error{
+	display: flex;
+	flex-flow: column;
+}
+.input-container input{
+	border-radius: 15px;
+	border-width: 1px;
+	border-color: var(---pale-blue);
+	color: var(---pale-blue);
+	font-size: 14px;
+	padding: 10px 20px;
+}
+.input-container button{
+	background-color: var(---blue);
+	color: white;
+	font-weight: 600;
+	border-radius: 15px;
+	border: none;
+	font-size: 14px;
+	padding: 10px 20px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	transition: background-color 0.2s;
+}
+.input-container button:hover {
+	background-color: var(---very-dark-blue);
+}
+.error-hide {
+    overflow: hidden;
+    max-height: 0;
+    animation: close .5s ease;
+    padding-left: 2vh;
+    padding-right: 1vh;
+}
+
+.error-show {
+    overflow: hidden;
+    animation: open .5s ease;
+    margin-bottom: 0.5rem;
+    padding-left: 2vh;
+    padding-right: 1vh;
+}
+#invalid-email-msg{
+	color: var(---light-red);
+	font-size: 12px;
+}
+#illustration{
+	max-width: 400px;
+	margin-bottom: 40px;
+}
+.media-links{
+	display: flex;
+	flex-flow: row;
+	gap: 30px;
+}
+.social-icon{
+	max-width: 50px;
+	max-height: 50px;
+	border-radius: 50%;
+	border-width: 10px;
+	border-color: var(---pale-blue);
+	color: var(---blue);
+	transition: color 0.2s;
+	transition: background-color 0.2s;
+	margin-bottom: 10px;
+}
+.social-icon:hover{
+	color: white;
+	background-color: var(---blue);
+}
+ion-icon {
+  font-size: 15px;
+  margin-top: 10px;
+}
+.copyright{
+	color: var(---gray);
+	font-size: 10px;
+}
+footer{
+	display: none;
+}
+@media only screen and (min-width: 700px){
+	main{
+		padding: 40px ;
+	}
+	#logo{
+		max-width: 100px;
+		margin-bottom: 20px;
+	}
+	h1{
+		font-size: 28px;
+	}
+	h1 strong{
+		font-size: 28px;
+	}
+	h2{
+		font-size: 16px;
+	}
+	
+	.input-container{
+		display: flex;
+		flex-flow: row;
+		max-width: 600px;
+	}
+	.input-container input{
+		font-size: 16px;
+	}
+	.input-error{
+		display: flex;
+		flex-flow: column;
+	}
+	.input-container button{
+		display: flex;
+		flex-flow: row;
+		min-width: 120px;
+		font-size: 16px;
+		max-height: 40px;
+	}
+	#illustration{
+		max-width: 600px;
+	}
+	.social-icon{
+		max-width: 80px;
+		max-height: 80px;
+		border-radius: 50%;
+		border-width: 10px;
+		border-color: var(---pale-blue);
+		color: var(---blue);
+		transition: color 0.2s;
+		transition: background-color 0.2s;
+		margin-bottom: 10px;
+	}
+	ion-icon {
+		font-size: 20px;
+		margin-top: 10px;
+	}
+	.copyright{
+		font-size: 16px;
+	}
+}
+@media only screen and (min-width: 1000px){
+	main{
+		padding: 80px 0px ;
+	}
+	#logo{
+		max-width: 150px;
+		margin-bottom: 20px;
+	}
+	h1{
+		font-size: 56px;
+	}
+	h1 strong{
+		font-size: 56px;
+	}
+	h2{
+		font-size: 24px;
+	}
+	
+	.input-container{
+		display: flex;
+		flex-flow: row;
+		max-width: 800px;
+		gap: 20px;
+	}
+	.input-container input{
+		font-size: 18px;
+	}
+	.input-error{
+		display: flex;
+		flex-flow: column;
+	}
+	.input-container button{
+		min-width: 200px;
+		display: flex;
+		flex-flow: row;
+		align-items: center	;
+		padding:  20px 60px;
+	}
+	#illustration{
+		max-width: 900px;
+	}
+	ion-icon {
+		font-size: 30px;
+		margin-top: 10px;
+	}
+	.copyright{
+		font-size: 18px;
+	}
+}

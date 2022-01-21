@@ -2,33 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Ping coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <main>
+    <img id="logo" src="images/logo.svg" alt="logo">
+    <h1>We are launching <strong>soon!</strong></h1>
+    <h2>Subscribe and get notified</h2>
+    <div class="input-container">
+      <div class="input-error">
+        <input id="input" type="email" name="email" placeholder="Your email adress...">
+        <p id="invalid-email-msg" class="error-hide"><em>Please provide a valid email adress</em></p>
+      </div>
+      <button onclick="handleClick(this)" id="button-notify">Notify Me</button>
+    </div>
+    <img id="illustration" src="images/illustration-dashboard.png">
 
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+    <div class="media-links">
+      <a class="social-icon" href="https://www.facebook.com/"><ion-icon name="logo-facebook" target="_blank"></ion-icon></a>
+      <a class="social-icon" href="https://twitter.com/"><ion-icon name="logo-twitter" target="_blank">></ion-icon></a>
+      <a class="social-icon" href="https://www.instagram.com/"><ion-icon name="logo-instagram" target="_blank">></ion-icon></a>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; Copyright Ping. All rights reserved.
+    </div>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
